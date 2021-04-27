@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html class="js modern mod-js mod-flexbox mod-flexboxlegacy mod-canvas mod-no-touch mod-draganddrop mod-rgba mod-hsla mod-multiplebgs mod-backgroundsize mod-borderimage mod-borderradius mod-boxshadow mod-textshadow mod-opacity mod-cssanimations mod-csscolumns mod-cssgradients mod-cssreflections mod-csstransforms mod-csstransforms3d mod-csstransitions mod-fontface mod-generatedcontent mod-video mod-audio mod-boxsizing" lang="en">
+<head>
+  <title>A-1 Uniforms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	 <!-- Custom Theme files -->
+   <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+   <!-- shop css -->
+   <link href="css/shop.css" type="text/css" rel="stylesheet" media="all">
+   <!-- Owl-Carousel-CSS -->
+   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+   <!-- flexslider-css -->
+   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+   <!-- font-awesome icons -->
+   <link href="css/fontawesome-all.min.css" rel="stylesheet">
+   <!-- //Custom Theme files -->
+      <style>
+          p {
+    font-family:  sans-serif;
+    font-size: 16px;
+    color:red;
+    line-height: 28px;
+    text-align: center;
+}
+     li a{
+    color:rgb(255, 255, 255);
+    font-size:medium
+  }
+  nav{
+    position:absolute;
+   
+}
+
+    header,image{
+      padding: 10px;
+      border: none;
+    }
+        .carousel-inner img {
+        width: 500%;
+        min-height: 200px;
+        background-color: lightyellow;
+      }
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+          text-decoration-color: red;
+        }
+      }
+          footer {
+    text-align: left;
+    padding: 3px;
+    background-color:white;
+    color: blue;
+  }
+  .col-lg-12{
+      background-color:chocolate;
+      border: none;
+    }
+    li a{
+      color:rgb(255, 255, 255);
+      font-size:large
+    }
+  * {
+    box-sizing: border-box;
+  }
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    height: 100%;
+    width: 18.9%;
+    padding: 5px 10px 50px 10px;
+    margin: 0px 1px 5px 6px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: rgb(165, 70, 70);
+  }
+  
+  .btn.active {
+    background-color: rgb(219, 223, 166);
+    color: white;
+  }
+  .rowmenu::after{
+      clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .columnn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  #roww {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  #roww:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .cardd {
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  .pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+      <nav>
+        <div id="menu">
+          <ul>
+                    <div class="dropdown">
+                        <li class="nut_dropdown"><a href="2Product.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PRODUCTS</a></li>
+                        <ul><div class="noidung_dropdown">
+                          <li><a href="2Product.html">All</a></li>
+                            <li><a href="dogiadung.html">Houseware</a></li>
+                            <li><a href="PHONEProduct_01.html">Smartphone</a></li>
+                            <li><a href="fashion.html">Fashion</a></li>
+                            <li><a href="book_01.html">Book</a></li>
+                        </div></ul>
+                      </div>
+                <li class="nut_dropdown"><a href="3support.html"><i class="fa fa-envelope" aria-hidden="true"></i> SUPPORT</a></li>
+              <li><a href="4Aboutus.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+              <li><a href="5Feedback.html"><i class="fa fa-star" aria-hidden="true"></i> FEEDBACK</a></li>
+                    <div class="dropdown">
+                        <li class="nut_dropdown"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> ACCOUNT</a></li>
+                        <ul><div class="noidung_dropdown">
+                            <li><a href="6login.html">Login</a></li>
+                            <li><a href="7Register.html">Register</a></li>
+                            <li><a href="6login.html">Logout</a></li>
+                        </div></ul>
+                    </div>
+              <li><a href="checkout.html"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><a><i class="fa fa-bell"></i></a></li>
+          </ul>
+        </div>
+    </nav>
+        <!--==================================================end nav============================================-->
+    </header>
+
+    <div class="innerf-pages section py-5">
+      <div class="container">
+          <div class="row my-sm-5">
+              <div class="col-lg-4 single-right-left">
+                  <div class="grid images_3_of_2">
+                      <div class="flexslider1">
+                          <ul class="slides">
+                              <li>
+                                  <div class="thumb-image">
+                                      <img src="imageclother/Picture/tuixach/tuixachthethaofila.jpeg" data-imagezoom="true" alt=" " class="img-fluid"> </div>
+                              </li>
+                              
+                          </ul>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-8 mt-lg-0 mt-5 single-right-left simpleCart_shelfItem">
+                  <h2>Unisex Handbangs
+                  </h2>
+                  <div class="caption">
+
+                      <ul class="rating-single">
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                              </a>
+                          </li>
+                          (1030 comments)
+                      </ul>
+                      <div class="clearfix"> </div>
+                      <h6 style="font-weight: bold; font-size: 40px; color: rgb(65, 118, 253);">
+                          $20
+                      </h6>
+                      <p style="text-decoration: line-through; font-size: 15px;">
+                          $30
+                      </p>
+                      <img src="./images/logobanhang.png">
+                      <a class="cheap">Cheaper refunds</a>
+                      <br/>
+                      <img src="./images/basic-rgb-162294976 (2).jpg">
+                      <a class="cheap">Free ship now</a>
+                  </div>
+                  <div class="desc_single">
+                      <h5>Describe </h5>
+                      <p>Buy now Unisex Handbangs at the best price at Shopping Reimagined</p>
+                        
+                        
+                       
+                         
+
+                  </div>
+                  
+                  <div class="occasion-cart">
+                      <div class="chr single-item single_page_b">
+                          <form action="#" method="post">
+                              <input type="hidden" name="cmd" value="_cart">
+                              <input type="hidden" name="add" value="1">
+                              <input type="hidden" name="hub_item" value="Floral Print Women's Top">
+                              <input type="hidden" name="amount" value="18.00">
+                              <button type="submit" class="hub-cart1 phub-cart btn">
+                                  add to cart<i class="fa fa-cart-plus" aria-hidden="true"></i>
+                              </button>
+                              <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                          </form>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section singlep_btm pb-5">
+    <div class="container">
+        <div class="new_arrivals">
+            <h4 class="rad-txt text-capitalize">May be you like: 
+            </h4>
+            <div class="card-group my-5">
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="images/ip-11-pro-xam.jpg" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="information.html" class="link-product-add-cart">see product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Iphone 12 Promax 512GB VN/AA</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$1499</p>
+                            <p class="line-through">$1799</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Iphone 12 Promax 512GB VN/AA">
+                            <input type="hidden" name="amount" value="1499">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="images/iphone-12-pro-max_1__7.jpg" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="xemsach.html" class="link-product-add-cart">see product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Iphone 12 Promax</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$1500</p>
+                            <p class="line-through">$2000</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Iphone 12 Promax">
+                            <input type="hidden" name="amount" value="1500">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="images/layer_20.jpg" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="xemsach.html" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Iphone 11 128GB | VN/A </h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$750</p>
+                            <p class="line-through">$1000</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Iphone 11 128GB | VN/A ">
+                            <input type="hidden" name="amount" value="750">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="images/iphone-se-2020_1__5.jpg" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="xemsach.html" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Iphone SE 2020 128GB | VN/A</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$500</p>
+                            <p class="line-through">$650</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Iphone SE 2020 128GB | VN/A">
+                            <input type="hidden" name="amount" value="500">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- //row  -->
+            </div>
+            <!--//new_arrivals-->
+        </div>
+    </div>
+  </div>
+</div>
+
+    <!--================================FOOTER===================================================-->
+ <footer class="footer-distributed">
+	  
+	<div class="footer-left">
+
+	  <h3>Shopping Reimagined</h3>
+
+	  <p class="footer-links">
+		<a href="1Home.html" class="link-1">Home</a>
+		
+		
+	  
+		<a href="2product.html">Products</a>
+	  
+		<a href="4Aboutus.html">About us</a>
+		
+		<a href="3support.html">Support</a>
+		
+		<a href="5Feedback.html">Feedback</a>
+	  </p>
+
+	  <p class="footer-company-name">ShoppingReimagined © 2021</p>
+	</div>
+
+	<div class="footer-center">
+
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p><A href="https://goo.gl/maps/tQBX8sa1Tzxze2p88"><span>243A Hoang Dieu Street</span> Ward 8, 4 District</A></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p><a href="tel:+84 786585686">+84 786585686</a></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:exshop@gmail.com">exshop@gmail.com</a></p>
+	  </div>
+
+	</div>
+
+	<div class="footer-right">
+
+	  <p class="footer-company-about">
+		<span>About Exshop</span>
+		This website is dedicated to Shopping Reimagined, a subsidiary of ExShop Group. Follow us to get the latest news.	  </p>
+
+	  <div class="footer-icons">
+
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+		<a href="https://github.com/"><i class="fa fa-github"></i></a>
+
+	  </div>
+
+	</div>
+  </div>
+  </footer>
+
+    <div class="modal fade" id="myModal_btn" tabindex="-1" role="dialog" aria-labelledby="myModal_btn" aria-hidden="true">
+      <div class="agilemodal-dialog modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Đăng kí</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body pt-3 pb-5 px-sm-5">
+                  <div class="row">
+                      <div class="col-md-6 mx-auto align-self-center">
+                          <img src="images/p3.png" class="img-fluid" alt="login_image" />
+                      </div>
+                      <div class="col-md-6">
+                          <form action="#" method="post">
+                              <div class="form-group">
+                                  <label for="recipient-name1" class="col-form-label">Họ tên</label>
+                                  <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+                              </div>
+                              <div class="form-group">
+                                  <label for="recipient-email" class="col-form-label">Email</label>
+                                  <input type="email" class="form-control" placeholder=" " name="Email" id="recipient-email" required="">
+                              </div>
+                              <div class="form-group">
+                                  <label for="password1" class="col-form-label">Mật khẩu</label>
+                                  <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+                              </div>
+                              <div class="form-group">
+                                  <label for="password2" class="col-form-label">Nhập lại mật khẩu</label>
+                                  <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+                              </div>
+                              <div class="sub-w3l">
+                                  <div class="sub-agile">
+                                      <input type="checkbox" id="brand2" value="">
+                                      <label for="brand2" class="mb-3">
+                                          <span></span>Tôi đồng ý với các Điều khoản & Điều kiện</label>
+                                  </div>
+                              </div>
+                              <div class="right-w3l">
+                                  <input type="submit" class="form-control" value="Đăng kí">
+                              </div>
+                          </form>
+                          <p class="text-center mt-3">Đã có tài khoản
+                              <a href="#" data-toggle="modal" data-target="#exampleModal1" class="text-dark login_btn">
+                                 Đăng nhập</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ <!-- sign up Modal -->
+ <div class="modal fade" id="myModal_btn" tabindex="-1" role="dialog" aria-labelledby="myModal_btn" aria-hidden="true">
+  <div class="agilemodal-dialog modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Đăng kí</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div class="modal-body pt-3 pb-5 px-sm-5">
+              <div class="row">
+                  <div class="col-md-6 mx-auto align-self-center">
+                      <img src="images/p3.png" class="img-fluid" alt="login_image" />
+                  </div>
+                  <div class="col-md-6">
+                      <form action="#" method="post">
+                          <div class="form-group">
+                              <label for="recipient-name1" class="col-form-label">Họ tên</label>
+                              <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+                          </div>
+                          <div class="form-group">
+                              <label for="recipient-email" class="col-form-label">Email</label>
+                              <input type="email" class="form-control" placeholder=" " name="Email" id="recipient-email" required="">
+                          </div>
+                          <div class="form-group">
+                              <label for="password1" class="col-form-label">Mật khẩu</label>
+                              <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+                          </div>
+                          <div class="form-group">
+                              <label for="password2" class="col-form-label">Nhập lại mật khẩu</label>
+                              <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+                          </div>
+                          <div class="sub-w3l">
+                              <div class="sub-agile">
+                                  <input type="checkbox" id="brand2" value="">
+                                  <label for="brand2" class="mb-3">
+                                      <span></span>Tôi đồng ý với các Điều khoản & Điều kiện</label>
+                              </div>
+                          </div>
+                          <div class="right-w3l">
+                              <input type="submit" class="form-control" value="Đăng kí">
+                          </div>
+                      </form>
+                      <p class="text-center mt-3">Đã có tài khoản
+                          <a href="#" data-toggle="modal" data-target="#exampleModal1" class="text-dark login_btn">
+                             Đăng nhập</a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- //signup modal -->
+<!-- signin Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1" aria-hidden="true">
+  <div class="agilemodal-dialog modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div class="modal-body  pt-3 pb-5 px-sm-5">
+              <div class="row">
+                  <div class="col-md-6 align-self-center">
+                      <img src="images/p3.png" class="img-fluid" alt="login_image" />
+                  </div>
+                  <div class="col-md-6">
+                      <form action="#" method="post">
+                          <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">Họ tên</label>
+                              <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+                          </div>
+                          <div class="form-group">
+                              <label class="col-form-label">Mật khẩu</label>
+                              <input type="password" class="form-control" placeholder=" " name="Password" required="">
+                          </div>
+                          <div class="right-w3l">
+                              <input type="submit" class="form-control" value="Login">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- signin Modal -->
+
+<script src="js/jquery-2.2.3.min.js"></script>
+
+<!-- smooth dropdown -->
+<script>
+  $(document).ready(function () {
+      $('ul li.dropdown').hover(function () {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+      }, function () {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+      });
+  });
+</script>
+<!-- //smooth dropdown -->
+<!-- script for password match -->
+<script>
+  window.onload = function () {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("password2").onchange = validatePassword;
+  }
+
+  function validatePassword() {
+      var pass2 = document.getElementById("password2").value;
+      var pass1 = document.getElementById("password1").value;
+      if (pass1 != pass2)
+          document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+      else
+          document.getElementById("password2").setCustomValidity('');
+      //empty string means no validation error
+  }
+</script>
+<!-- script for password match -->
+
+<!-- FlexSlider -->
+<script src="js/jquery.flexslider.js"></script>
+<script>
+// Can also be used with $(document).ready()
+$(window).load(function () {
+  $('.flexslider1').flexslider({
+      animation: "slide",
+      controlNav: "thumbnails"
+  });
+});
+</script>
+<!-- //FlexSlider-->
+<!-- Responsiveslides -->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+// You can also use "$(window).load(function() {"
+$(function () {
+  // Slideshow 4
+  $("#slider3").responsiveSlides({
+      auto: false,
+      pager: true,
+      nav: false,
+      speed: 500,
+      namespace: "callbacks",
+      before: function () {
+          $('.events').append("<li>before event fired.</li>");
+      },
+      after: function () {
+          $('.events').append("<li>after event fired.</li>");
+      }
+  });
+
+});
+</script>
+<!-- // Responsiveslides -->
+<!-- cart-js -->
+<script src="js/minicart.js"></script>
+<script>
+hub.render();
+
+hub.cart.on('new_checkout', function (evt) {
+  var items, len, i;
+
+  if (this.subtotal() > 0) {
+      items = this.items();
+
+      for (i = 0, len = items.length; i < len; i++) {}
+  }
+});
+</script>
+<!-- //cart-js -->
+<!-- zoom -->
+<script src="js/imagezoom.js"></script>
+<!-- zoom-->
+
+<!-- start-smooth-scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script>
+jQuery(document).ready(function ($) {
+  $(".scroll").click(function (event) {
+      event.preventDefault();
+
+      $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+      }, 1000);
+  });
+});
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script>
+$(document).ready(function () {
+  /*
+  var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear' 
+  };
+  */
+
+  $().UItoTop({
+      easingType: 'easeOutQuart'
+  });
+
+});
+</script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        * { box-sizing: border-box; }
+
+
+body {
+  background-color:rgb(255, 255, 255);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color:rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 16px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+nav{
+	position:absolute;
+}
+  @keyframes left {
+	0% {
+	  opacity: 0;
+	  width: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	  padding: 20px 40px;
+	  width: 440px;
+	}
+  }
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.right {
+  margin-top:3%;
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-image: url('image/feedback-2.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.header > h2 {
+  margin: 0;
+  color: #cc7809;
+}
+li a{
+	color:rgb(255, 255, 255);
+	font-size:medium;
+	font-family:  sans-serif;}
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.733);
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #d1921e;
+}
+
+.form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.animation {
+  animation-name: move;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-delay: .2s;
+}
+
+.a1 {
+  animation-delay: 2s;
+}
+
+.a2 {
+  animation-delay: 2.1s;
+}
+
+.a3 {
+  animation-delay: 2.2s;
+}
+
+.a4 {
+  animation-delay: 2.3s;
+}
+
+.a5 {
+  animation-delay: 2.4s;
+}
+
+.a6 {
+  animation-delay: 2.6s;
+}
+
+
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div id="menu">
+      <ul>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="2Product.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PRODUCTS</a></li>
+                    <ul><div class="noidung_dropdown">
+                      <li><a href="2Product.html">All</a></li>
+                        <li><a href="dogiadung.html">Houseware</a></li>
+                        <li><a href="PHONEProduct_01.html">Smartphone</a></li>
+                        <li><a href="fashion.html">Fashion</a></li>
+                        <li><a href="book_01.html">Book</a></li>
+                    </div></ul>
+                  </div>
+            <li class="nut_dropdown"><a href="3support.html"><i class="fa fa-envelope" aria-hidden="true"></i> SUPPORT</a></li>
+          <li><a href="4Aboutus.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+          <li><a href="5Feedback.html"><i class="fa fa-star" aria-hidden="true"></i> FEEDBACK</a></li>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> ACCOUNT</a></li>
+                    <ul><div class="noidung_dropdown">
+                        <li><a href="6login.html">Login</a></li>
+                        <li><a href="7Register.html">Register</a></li>
+                        <li><a href="6login.html">Logout</a></li>
+                    </div></ul>
+                </div>
+          <li><a href="checkout.html"><i class="fa fa-shopping-cart"></i></a></li>
+          <li><a><i class="fa fa-bell"></i></a></li>
+      </ul>
+    </div>
+</nav>
+    <!--==================================================end nav============================================-->
+    <div class="container">
+        <div class="left">
+          <div class="header">
+            <h2 class="animation a1">LOGIN</h2>
+            <h4 class="animation a2">The leading reputable online retailer in Vietnam!</h4>
+          </div>
+          <div class="form" method="get" action="#">
+            <input type="email" class="form-field animation a3" placeholder="Email Address" required autofocus>
+            <input type="password" class="form-field animation a4" placeholder="Password" required autofocus>
+            <p class="animation a5"><a href="#">Forgot Password</a></p>
+            <button type="submit" >LOGIN</button>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
+<!--================================FOOTER===================================================-->
+<footer class="footer-distributed">
+	  
+	<div class="footer-left">
+
+	  <h3>Shopping Reimagined</h3>
+
+	  <p class="footer-links">
+		<a href="1Home.html" class="link-1">Home</a>
+		
+		
+	  
+		<a href="2product.html">Products</a>
+	  
+		<a href="4Aboutus.html">About us</a>
+		
+		<a href="3support.html">Support</a>
+		
+		<a href="5Feedback.html">Feedback</a>
+	  </p>
+
+	  <p class="footer-company-name">ShoppingReimagined © 2021</p>
+	</div>
+
+	<div class="footer-center">
+
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p><A href="https://goo.gl/maps/tQBX8sa1Tzxze2p88"><span>243A Hoang Dieu Street</span> Ward 8, 4 District</A></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p><a href="tel:+84 786585686">+84 786585686</a></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:exshop@gmail.com">exshop@gmail.com</a></p>
+	  </div>
+
+	</div>
+
+	<div class="footer-right">
+
+	  <p class="footer-company-about">
+		<span>About ShoppingReimagined</span>
+		This website is dedicated to Shopping Reimagined, a subsidiary of ExShop Group. Follow us to get the latest news.	  </p>
+
+	  <div class="footer-icons">
+
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+		<a href="https://github.com/"><i class="fa fa-github"></i></a>
+
+	  </div>
+
+	</div>
+  </div>
+  </footer>
+ 
+
+</body>
+</html>
